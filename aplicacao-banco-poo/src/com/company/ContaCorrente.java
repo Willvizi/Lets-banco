@@ -21,7 +21,7 @@ public class ContaCorrente extends Conta{
         }
     }
     public void transferir(ContaCorrente conta,BigDecimal valor){
-        if(consultarSaldo().compareTo(valor.multiply(getCliente().getTaxaTransferencia())) < 0){
+        if(consultarSaldo().compareTo(valor.multiply(getCliente().getTaxaTransferencia())) <= 0){
             System.out.println("Valor insuficiente.");
         }
         else {
